@@ -15,13 +15,16 @@ int main()
     int Arr[10] = {29, 3, 56, 9, 12, 20, 2, 70, 3, 80};
     for(int i=10; i>0; i--)
     {
-        cout<<"index:"<<i<<endl;
         heapify(Arr, 10, i);
-        for(int x: Arr)
-        {
-            cout<<x<<endl;
-        }
-        cout<<"*********"<<endl;
+    }
+
+    for(int i=10; i>1;)
+    {
+        int temp = Arr[0];
+        Arr[0] = Arr[i-1];
+        Arr[i-1] = temp;
+        heapify(Arr, i-1, 1);
+        i--;
     }
 
     for(int x: Arr)
