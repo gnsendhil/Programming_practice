@@ -1,0 +1,10 @@
+- Open a text file.
+- Parses each word from text file and insert into hash table.
+- Hash Table implementation:
+	- hash is computed for each string.
+	- compute hash index for the hash value.
+	- if node is not present at hash index, create a node for the string and add to the linked list of hash index.
+	- if there is matching node (incoming string matches with the string present in the node) in the linked list at hash index, increment 		the count value.
+- After strings are pushed into hash table, get the nodes from hash and insert into a linked list.
+- Nodes will be inserted into linked list in descending order. the linked list is mainted for 20 nodes only.
+- Print the linked the list. 
